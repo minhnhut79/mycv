@@ -150,10 +150,11 @@
   <button id="reset-button" style="display:none;">Chơi lại</button>
   <div id="bags-container"></div>
   <div id="challenge-text">Hãy chọn một túi để khám phá nhiệm vụ!</div>
-  <!-- Âm thanh xé túi -->
-  <audio id="tear-sound" src="xe_giay.mp3" preload="auto"></audio>
+ <!-- Âm thanh xé túi -->
+  <audio id="tear-sound" src="xe_giay.mp3.mp3" preload="auto"></audio>
   <!-- Nhạc nền -->
-  <audio id="bg-music" src="nhac_nen.mp3" preload="auto" loop></audio>
+  <audio id="bg-music" src="nhac_nen.mp3.mp3" preload="auto" loop></audio>
+
   <script>
     const tasks = [
       "🎤 Nói nhanh 3 tiếng có vần ach trong 5 giây",
