@@ -15,19 +15,16 @@
       padding: 30px;
       margin: 0;
     }
-
     h1 {
       font-size: 2.2rem;
       color: #2c2c2c;
       margin-bottom: 10px;
     }
-
     h2 {
       font-size: 1rem;
       color: #333;
       margin-bottom: 30px;
     }
-
     #start-button, #reset-button {
       padding: 12px 24px;
       font-size: 1.2rem;
@@ -39,18 +36,15 @@
       margin-bottom: 20px;
       transition: background-color 0.3s;
     }
-
     #start-button:hover, #reset-button:hover {
       background-color: #ff3b2e;
     }
-
     #bags-container {
       display: none;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
-
     .bag-container {
       position: relative;
       width: 120px;
@@ -59,12 +53,10 @@
       perspective: 1000px;
       animation: drop 0.8s ease-in;
     }
-
     @keyframes drop {
       0% { transform: translateY(-200px) scale(0.7); opacity: 0; }
       100% { transform: translateY(0) scale(1); opacity: 1; }
     }
-
     .bag-sides {
       position: absolute;
       width: 100%;
@@ -72,7 +64,6 @@
       display: flex;
       z-index: 2;
     }
-
     .bag-side {
       width: 50%;
       height: 100%;
@@ -89,25 +80,20 @@
       transition: transform 1.2s ease-in-out;
       background-color: #ffb347;
     }
-
     .left-side {
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
     }
-
     .right-side {
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
     }
-
     .bag-container.torn .left-side {
       transform: translateX(-140%) rotate(-30deg);
     }
-
     .bag-container.torn .right-side {
       transform: translateX(140%) rotate(30deg);
     }
-
     .bag-content {
       position: absolute;
       top: 0;
@@ -129,12 +115,10 @@
       transition: opacity 0.4s ease-in-out;
       text-align: center;
     }
-
     .bag-container.torn .bag-content {
       opacity: 1;
       z-index: 10;
     }
-
     #challenge-text {
       margin-top: 30px;
       padding: 20px;
@@ -147,8 +131,6 @@
       text-align: center;
       display: none;
     }
-
-    /* Rung túi */
     @keyframes shake {
       0% { transform: translateX(0); }
       25% { transform: translateX(-5px); }
@@ -156,7 +138,6 @@
       75% { transform: translateX(-5px); }
       100% { transform: translateX(0); }
     }
-
     .bag-container.shake {
       animation: shake 0.3s ease-in-out;
     }
@@ -167,16 +148,12 @@
   <h2>Giáo viên: Nguyễn Lê Minh Nhựt</h2>
   <button id="start-button">Bắt đầu trò chơi</button>
   <button id="reset-button" style="display:none;">Chơi lại</button>
-
   <div id="bags-container"></div>
   <div id="challenge-text">Hãy chọn một túi để khám phá nhiệm vụ!</div>
-
   <!-- Âm thanh xé túi -->
-  <audio id="tear-sound" src="xe_giay.mp3.mp3" preload="auto"></audio>
-
+  <audio id="tear-sound" src="xe_giay.mp3" preload="auto"></audio>
   <!-- Nhạc nền -->
-  <audio id="bg-music" src="nhac_nen.mp3.mp3" preload="auto" loop></audio>
-
+  <audio id="bg-music" src="nhac_nen.mp3" preload="auto" loop></audio>
   <script>
     const tasks = [
       "🎤 Nói nhanh 3 tiếng có vần ach trong 5 giây",
@@ -187,9 +164,7 @@
       "Phân biệt âm đầu trong *ich* và *êch*",
       "Trong 5 giây, em hãy nói 3 từ khác nhau có vần ich và diễn tả 1 từ bằng hành động hài hước!",
       "🗣️ Thì thầm vào tai bạn một từ có vần êch mà khiến bạn ấy phải bật cười"
-
     ];
-
     const colors = ['#ff9999', '#ffcc99', '#ffff99', '#ccff99', '#99ffcc', '#99ccff', '#cc99ff', '#ff99cc'];
     const container = document.getElementById("bags-container");
     const challengeText = document.getElementById("challenge-text");
